@@ -18,7 +18,7 @@ class SeedCommand extends Command
         {--fresh : Truncate tables before seeding (BLOCKED if external tables reference geodata)}
         {--force : Force --fresh even with warnings (development only!)}
         {--no-countries : Skip seeding the countries table}
-        {--no-interaction : Skip interactive prompts, use defaults}
+        {--skip-wizard : Skip interactive prompts, use defaults}
         {--list : List available country data packages}';
 
     protected $description = 'Seed geographic data: world countries + detailed regions/provinces/cities per country';
@@ -57,7 +57,7 @@ class SeedCommand extends Command
                 $this->info('Available: ' . implode(', ', array_map('strtoupper', $availableCountries)));
                 return self::FAILURE;
             }
-        } elseif ($isFirstRun && ! $this->option('no-interaction')) {
+        } elseif ($isFirstRun && ! $this->option('skip-wizard')) {
             $countriesToSeed = $this->firstRunWizard($availableCountries);
             if ($countriesToSeed === null) {
                 $this->info('Seeding cancelled.');
