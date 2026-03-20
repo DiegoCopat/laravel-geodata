@@ -1,6 +1,6 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Models;
+namespace DiegoCopat\LaravelGeodata\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -30,7 +30,7 @@ class City extends Model
 
     public function getTable(): string
     {
-        return config('italian-geodata.tables.cities', 'cities');
+        return config('geodata.tables.cities', 'cities');
     }
 
     public function province(): BelongsTo

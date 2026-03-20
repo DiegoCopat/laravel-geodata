@@ -1,6 +1,6 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Models;
+namespace DiegoCopat\LaravelGeodata\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -22,7 +22,7 @@ class Country extends Model
 
     public function getTable(): string
     {
-        return config('italian-geodata.tables.countries', 'countries');
+        return config('geodata.tables.countries', 'countries');
     }
 
     public function regions(): HasMany

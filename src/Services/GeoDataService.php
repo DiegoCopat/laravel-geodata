@@ -1,11 +1,11 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Services;
+namespace DiegoCopat\LaravelGeodata\Services;
 
-use DiegoCopat\ItalianGeodata\Models\City;
-use DiegoCopat\ItalianGeodata\Models\Country;
-use DiegoCopat\ItalianGeodata\Models\Province;
-use DiegoCopat\ItalianGeodata\Models\Region;
+use DiegoCopat\LaravelGeodata\Models\City;
+use DiegoCopat\LaravelGeodata\Models\Country;
+use DiegoCopat\LaravelGeodata\Models\Province;
+use DiegoCopat\LaravelGeodata\Models\Region;
 use Illuminate\Database\Eloquent\Collection;
 
 class GeoDataService
@@ -17,7 +17,7 @@ class GeoDataService
     {
         $query = Country::query()->orderBy('name');
 
-        if (! $includeHistorical && ! config('italian-geodata.include_historical_countries', false)) {
+        if (! $includeHistorical && ! config('geodata.include_historical_countries', false)) {
             $query->active();
         }
 

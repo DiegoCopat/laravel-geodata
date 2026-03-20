@@ -1,6 +1,6 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Commands;
+namespace DiegoCopat\LaravelGeodata\Commands;
 
 use Illuminate\Console\Command;
 

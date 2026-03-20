@@ -1,8 +1,8 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Facades;
+namespace DiegoCopat\LaravelGeodata\Facades;
 
-use DiegoCopat\ItalianGeodata\Services\FiscalCodeService;
+use DiegoCopat\LaravelGeodata\Services\FiscalCodeService;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static bool validate(string $fiscalCode)
  * @method static array|null parse(string $fiscalCode)
  *
- * @see \DiegoCopat\ItalianGeodata\Services\FiscalCodeService
+ * @see \DiegoCopat\LaravelGeodata\Services\FiscalCodeService
  */
 class FiscalCode extends Facade
 {

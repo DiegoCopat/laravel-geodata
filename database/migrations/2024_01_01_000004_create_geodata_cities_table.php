@@ -8,8 +8,8 @@ return new class extends Migration
 {
     public function up(): void
     {
-        $table = config('italian-geodata.tables.cities', 'cities');
-        $provincesTable = config('italian-geodata.tables.provinces', 'provinces');
+        $table = config('geodata.tables.cities', 'cities');
+        $provincesTable = config('geodata.tables.provinces', 'provinces');
 
         Schema::create($table, function (Blueprint $table) use ($provincesTable) {
             $table->id();
@@ -31,6 +31,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists(config('italian-geodata.tables.cities', 'cities'));
+        Schema::dropIfExists(config('geodata.tables.cities', 'cities'));
     }
 };

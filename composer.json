@@ -1,13 +1,14 @@
 {
-    "name": "diegocopat/italian-geodata",
-    "description": "Complete Italian geographic data (regions, provinces, municipalities with Belfiore codes, postal codes) + world countries + Italian fiscal code (Codice Fiscale) generation and validation for Laravel.",
+    "name": "diegocopat/laravel-geodata",
+    "description": "World countries + geographic data (regions, provinces, municipalities with postal codes) + Italian fiscal code (Codice Fiscale) for Laravel. Country-scoped: start with Italy, expand globally.",
     "keywords": [
         "laravel",
-        "italy",
         "geodata",
-        "comuni",
-        "province",
-        "regioni",
+        "countries",
+        "regions",
+        "provinces",
+        "municipalities",
+        "postal-codes",
         "cap",
         "belfiore",
         "codice-fiscale",
@@ -34,22 +35,22 @@
     },
     "autoload": {
         "psr-4": {
-            "DiegoCopat\\ItalianGeodata\\": "src/"
+            "DiegoCopat\\LaravelGeodata\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DiegoCopat\\ItalianGeodata\\Tests\\": "tests/"
+            "DiegoCopat\\LaravelGeodata\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "DiegoCopat\\ItalianGeodata\\ItalianGeodataServiceProvider"
+                "DiegoCopat\\LaravelGeodata\\LaravelGeodataServiceProvider"
             ],
             "aliases": {
-                "GeoData": "DiegoCopat\\ItalianGeodata\\Facades\\GeoData",
-                "FiscalCode": "DiegoCopat\\ItalianGeodata\\Facades\\FiscalCode"
+                "GeoData": "DiegoCopat\\LaravelGeodata\\Facades\\GeoData",
+                "FiscalCode": "DiegoCopat\\LaravelGeodata\\Facades\\FiscalCode"
             }
         }
     },

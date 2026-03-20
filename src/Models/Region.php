@@ -1,6 +1,6 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Models;
+namespace DiegoCopat\LaravelGeodata\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -19,7 +19,7 @@ class Region extends Model
 
     public function getTable(): string
     {
-        return config('italian-geodata.tables.regions', 'regions');
+        return config('geodata.tables.regions', 'regions');
     }
 
     public function country(): BelongsTo

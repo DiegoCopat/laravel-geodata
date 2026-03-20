@@ -1,12 +1,12 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Tests;
+namespace DiegoCopat\LaravelGeodata\Tests;
 
-use DiegoCopat\ItalianGeodata\Models\City;
-use DiegoCopat\ItalianGeodata\Models\Country;
-use DiegoCopat\ItalianGeodata\Models\Province;
-use DiegoCopat\ItalianGeodata\Models\Region;
-use DiegoCopat\ItalianGeodata\Services\FiscalCodeService;
+use DiegoCopat\LaravelGeodata\Models\City;
+use DiegoCopat\LaravelGeodata\Models\Country;
+use DiegoCopat\LaravelGeodata\Models\Province;
+use DiegoCopat\LaravelGeodata\Models\Region;
+use DiegoCopat\LaravelGeodata\Services\FiscalCodeService;
 
 class FiscalCodeServiceTest extends TestCase
 {

@@ -1,6 +1,6 @@
-# Italian Geodata
+# Laravel Geodata
 
-Complete Italian geographic data + world countries + fiscal code (Codice Fiscale) generation/validation for Laravel.
+World countries + geographic data (regions, provinces, municipalities) + Italian fiscal code (Codice Fiscale) for Laravel. Country-scoped: start with Italy, expand globally.
 
 ## Features
 
@@ -14,13 +14,13 @@ Complete Italian geographic data + world countries + fiscal code (Codice Fiscale
 ## Installation
 
 ```bash
-composer require diegocopat/italian-geodata
+composer require diegocopat/laravel-geodata
 ```
 
 The package auto-discovers the service provider. Publish the config (optional):
 
 ```bash
-php artisan vendor:publish --tag=italian-geodata-config
+php artisan vendor:publish --tag=geodata-config
 ```
 
 Run migrations and seed data:
@@ -33,7 +33,7 @@ php artisan geodata:seed
 ## Configuration
 
 ```php
-// config/italian-geodata.php
+// config/geodata.php
 
 return [
     'tables' => [
@@ -51,7 +51,7 @@ return [
 ### GeoData Facade
 
 ```php
-use DiegoCopat\ItalianGeodata\Facades\GeoData;
+use DiegoCopat\LaravelGeodata\Facades\GeoData;
 
 // Countries
 GeoData::countries();                          // active countries
@@ -82,7 +82,7 @@ GeoData::isItaly('IT');                        // true
 ### FiscalCode Facade
 
 ```php
-use DiegoCopat\ItalianGeodata\Facades\FiscalCode;
+use DiegoCopat\LaravelGeodata\Facades\FiscalCode;
 
 // Generate
 $cf = FiscalCode::generate([
@@ -139,7 +139,7 @@ $data = FiscalCode::parse('RSSMRA90A15L378X');
 All models are available for direct queries:
 
 ```php
-use DiegoCopat\ItalianGeodata\Models\{Country, Region, Province, City};
+use DiegoCopat\LaravelGeodata\Models\{Country, Region, Province, City};
 
 // Scopes
 Country::active()->get();

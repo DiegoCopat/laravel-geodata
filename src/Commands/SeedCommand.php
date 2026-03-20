@@ -1,11 +1,11 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Commands;
+namespace DiegoCopat\LaravelGeodata\Commands;
 
-use DiegoCopat\ItalianGeodata\Models\City;
-use DiegoCopat\ItalianGeodata\Models\Country;
-use DiegoCopat\ItalianGeodata\Models\Province;
-use DiegoCopat\ItalianGeodata\Models\Region;
+use DiegoCopat\LaravelGeodata\Models\City;
+use DiegoCopat\LaravelGeodata\Models\Country;
+use DiegoCopat\LaravelGeodata\Models\Province;
+use DiegoCopat\LaravelGeodata\Models\Region;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -156,10 +156,10 @@ class SeedCommand extends Command
     {
         $driver = DB::getDriverName();
         $geodataTables = [
-            config('italian-geodata.tables.countries', 'countries'),
-            config('italian-geodata.tables.regions', 'regions'),
-            config('italian-geodata.tables.provinces', 'provinces'),
-            config('italian-geodata.tables.cities', 'cities'),
+            config('geodata.tables.countries', 'countries'),
+            config('geodata.tables.regions', 'regions'),
+            config('geodata.tables.provinces', 'provinces'),
+            config('geodata.tables.cities', 'cities'),
         ];
 
         $refs = [];

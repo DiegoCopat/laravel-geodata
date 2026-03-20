@@ -1,8 +1,8 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Tests;
+namespace DiegoCopat\LaravelGeodata\Tests;
 
-use DiegoCopat\ItalianGeodata\ItalianGeodataServiceProvider;
+use DiegoCopat\LaravelGeodata\LaravelGeodataServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 abstract class TestCase extends OrchestraTestCase
@@ -10,15 +10,15 @@ abstract class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app): array
     {
         return [
-            ItalianGeodataServiceProvider::class,
+            LaravelGeodataServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app): array
     {
         return [
-            'GeoData' => \DiegoCopat\ItalianGeodata\Facades\GeoData::class,
-            'FiscalCode' => \DiegoCopat\ItalianGeodata\Facades\FiscalCode::class,
+            'GeoData' => \DiegoCopat\LaravelGeodata\Facades\GeoData::class,
+            'FiscalCode' => \DiegoCopat\LaravelGeodata\Facades\FiscalCode::class,
         ];
     }
 

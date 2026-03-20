@@ -1,10 +1,10 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Facades;
+namespace DiegoCopat\LaravelGeodata\Facades;
 
-use DiegoCopat\ItalianGeodata\Models\City;
-use DiegoCopat\ItalianGeodata\Models\Country;
-use DiegoCopat\ItalianGeodata\Services\GeoDataService;
+use DiegoCopat\LaravelGeodata\Models\City;
+use DiegoCopat\LaravelGeodata\Models\Country;
+use DiegoCopat\LaravelGeodata\Services\GeoDataService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Facade;
 
@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static Country|null italy()
  * @method static bool isItaly(string $identifier)
  *
- * @see \DiegoCopat\ItalianGeodata\Services\GeoDataService
+ * @see \DiegoCopat\LaravelGeodata\Services\GeoDataService
  */
 class GeoData extends Facade
 {

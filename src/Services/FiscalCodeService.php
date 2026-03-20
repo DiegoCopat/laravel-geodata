@@ -1,9 +1,9 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Services;
+namespace DiegoCopat\LaravelGeodata\Services;
 
-use DiegoCopat\ItalianGeodata\Models\City;
-use DiegoCopat\ItalianGeodata\Models\Country;
+use DiegoCopat\LaravelGeodata\Models\City;
+use DiegoCopat\LaravelGeodata\Models\Country;
 use Illuminate\Support\Carbon;
 
 class FiscalCodeService

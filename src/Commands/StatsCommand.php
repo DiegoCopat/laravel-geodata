@@ -1,11 +1,11 @@
 <?php
 
-namespace DiegoCopat\ItalianGeodata\Commands;
+namespace DiegoCopat\LaravelGeodata\Commands;
 
-use DiegoCopat\ItalianGeodata\Models\City;
-use DiegoCopat\ItalianGeodata\Models\Country;
-use DiegoCopat\ItalianGeodata\Models\Province;
-use DiegoCopat\ItalianGeodata\Models\Region;
+use DiegoCopat\LaravelGeodata\Models\City;
+use DiegoCopat\LaravelGeodata\Models\Country;
+use DiegoCopat\LaravelGeodata\Models\Province;
+use DiegoCopat\LaravelGeodata\Models\Region;
 use Illuminate\Console\Command;
 
 class StatsCommand extends Command
