@@ -351,7 +351,14 @@ class SeedCommand extends Command
                 $belfiore = trim($nation['codice_belfiore'] ?? '');
                 $citizenship = $this->cleanName($nation['denominazione_cittadinanza'] ?? '');
 
-                if (empty($belfiore) || empty($name)) {
+                if (empty($name)) {
+                    continue;
+                }
+
+                // Italy has no Z-code (citizens use municipality codes)
+                if (empty($belfiore) && strtoupper($sigla) === 'IT') {
+                    $belfiore = 'Z000';
+                } elseif (empty($belfiore)) {
                     continue;
                 }
 
