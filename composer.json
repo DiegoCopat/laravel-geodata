@@ -1,0 +1,58 @@
+{
+    "name": "diegocopat/italian-geodata",
+    "description": "Complete Italian geographic data (regions, provinces, municipalities with Belfiore codes, postal codes) + world countries + Italian fiscal code (Codice Fiscale) generation and validation for Laravel.",
+    "keywords": [
+        "laravel",
+        "italy",
+        "geodata",
+        "comuni",
+        "province",
+        "regioni",
+        "cap",
+        "belfiore",
+        "codice-fiscale",
+        "fiscal-code",
+        "istat"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego Copat",
+            "email": "sviluppo@connetrio.it",
+            "homepage": "https://connetrio.cloud"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/console": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/database": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DiegoCopat\\ItalianGeodata\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DiegoCopat\\ItalianGeodata\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DiegoCopat\\ItalianGeodata\\ItalianGeodataServiceProvider"
+            ],
+            "aliases": {
+                "GeoData": "DiegoCopat\\ItalianGeodata\\Facades\\GeoData",
+                "FiscalCode": "DiegoCopat\\ItalianGeodata\\Facades\\FiscalCode"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
